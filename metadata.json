@@ -1,0 +1,6 @@
+{
+  "name": "AgriConnect - Field Crew & Harvest Operations",
+  "description": "Agricultural labor dispatch, real-time shift yield ledger, urgent weather harvest contracts, and produce marketplace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline: 'Manrope', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-primary: #008425;
+  --color-primary-hover: #00681b;
+  --color-primary-dark: #005117;
+  --color-primary-container: #008425;
+  --color-on-primary: #ffffff;
+  --color-secondary: #256c2e;
+  --color-secondary-container: #a9f5a7;
+  --color-on-secondary-container: #1b4d22;
+  --color-hazard: #ba1a1a;
+  --color-hazard-bg: #ffdad6;
+  --color-hazard-text: #93000a;
+}
+
+:root {
+  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color-scheme: light;
+  background-color: #f8f9fa;
+  color: #1e293b;
+}
+
+.dark {
+  color-scheme: dark;
+  background-color: #0b0f17;
+  color: #f1f5f9;
+}
+
+/* Frosted glass utilities */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.dark .glass-panel {
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.dark .glass-card {
+  background-color: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar styling for high-density tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 120, 0.4);
+}
+
